@@ -106,7 +106,7 @@ export default function Home() {
               id="welcome"
               className="font-[500] flex flex-col text-black text-xl sm:text-2xl"
             >
-              <li>ISRAEL</li> <li className="mt-[-12px]"> OLUWASAMI.</li>
+              <li>ISRAEL</li> <li className="mt-[-11px]"> OLUWASAMI.</li>
             </ul>
             <div id="contactbtn">
               <button className="px-4 py-2 text-[16px] sm:text-3xl rounded-md border border-black bg-white text-black hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200">
@@ -116,17 +116,18 @@ export default function Home() {
           </header>
 
           <section className="relative">
-            <section className="h-[80vh] text-5xl lg:text-7xl text-black flex place-items-center leading-[60px] lg:leading-[100px] ">
+            <section className="h-[80vh] text-5xl lg:text-7xl text-black flex leading-[60px] lg:leading-[100px] pt-10">
               <div
                 id="mainText"
-                className="font-[500] font-cantarell tracking-tight"
+                className="font-[500] font-cantarell tracking-tight pt-6"
               >
-                Crafting <br />
-                <FlipWords
-                  words={words}
-                  className={` clashDisplay font-[600]  italic`}
-                />{" "}
-                <br />
+                <div className="flex md:flex-row flex-col">
+                  <p>Crafting </p>
+                  <FlipWords
+                    words={words}
+                    className={` clashDisplay font-[600]  italic`}
+                  />{" "}
+                </div>
                 endpoints and designs for <br />
                 <span className="clashDisplay">
                   businesses, brands, and companies
