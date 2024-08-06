@@ -1,8 +1,8 @@
-import { Cantarell } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import "./styles.css";
 
-const inter = Cantarell({ subsets: ["latin"], weight: "400" });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Israel Oluwasami",

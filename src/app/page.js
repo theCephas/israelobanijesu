@@ -137,7 +137,7 @@ export default function Home() {
             </section>
             <div
               id="about"
-              className="text-black w-[300px] text-[17px] absolute sm:bottom-[-15px] right-0 flex gap-2"
+              className="text-black w-[300px] font-cantarell text-[17px] absolute sm:bottom-[-15px] right-0 flex gap-2"
             >
               <p>
                 <span className="pr-2 text-black/60 font-bold">ABOUT</span>I am
