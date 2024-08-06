@@ -1,113 +1,168 @@
-import Image from "next/image";
+"use client";
+import { useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
+import { FlipWords } from "@/components/ui/flip-words";
+import { ArrowDown } from "lucide-react";
+import Skills from "@/components/skills/Skills";
 
 export default function Home() {
+  const words = ["seamless", "end-to-end", "unique"];
+  const comp = useRef(null);
+  const lastSectionRef = useRef(null);
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const t1 = gsap.timeline();
+      t1.from("#intro-slider", {
+        xPercent: "-100",
+        duration: 1.3,
+        delay: 0.3,
+      })
+        .from(["#title-1", "#title-2", "#title-3"], {
+          opacity: 0,
+          y: "+=30",
+          stagger: 0.5,
+        })
+        .to(["#title-1", "#title-2", "#title-3"], {
+          opacity: 0,
+          y: "-=30",
+          delay: 0.3,
+          stagger: 0.5,
+        })
+        .to("#intro-slider", {
+          xPercent: "-100",
+          duration: 1.3,
+        })
+        .from("#welcome", {
+          opacity: 0,
+          duration: 0.8,
+        })
+        .from("#contactbtn", {
+          opacity: 0,
+          duration: 1.2,
+        })
+        .from("#mainText", {
+          opacity: 0,
+          duration: 1.6,
+          y: "100",
+          skewY: 10,
+          stagger: {
+            amount: 0.4,
+          },
+        })
+        .from("#about", {
+          opacity: 0,
+          duration: 1.8,
+          skewX: 10,
+        })
+        .from("#arrow", {
+          opacity: 0,
+          duration: 2,
+        })
+
+        .set(lastSectionRef.current, {
+          display: "block",
+          onComplete: () => {
+            gsap.from(lastSectionRef.current, { opacity: 0, duration: 1 });
+          },
+        });
+    }, comp);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="relative" ref={comp}>
+      <div
+        id="intro-slider"
+        className="h-screen clashDisplay p-10 bg-black leading-7 text-white/60 absolute z-30 top-0 left-0 w-full justify-center flex flex-col gap-10 tracking-tight"
+      >
+        <h1
+          id="title-1"
+          className="md:text-7xl sm:text-6xl text-4xl font-semibold"
+        >
+          Software Engineer
+        </h1>
+        <h1
+          id="title-2"
+          className="md:text-7xl sm:text-6xl text-4xl font-semibold"
+        >
+          Code Mentor
+        </h1>
+        <h1
+          id="title-3"
+          className="md:text-7xl sm:text-6xl text-4xl font-semibold"
+        >
+          Freelancer
+        </h1>
+      </div>
+      <section
+        id="intro-slider2"
+        className="bg-white py-8 px-4 sm:px-[20px] lg:px-[50px]"
+      >
+        <div className="max-w-[1440px] mx-auto">
+          <header className="flex justify-between items-center clashDisplay">
+            <ul
+              id="welcome"
+              className="font-[500] flex flex-col text-black text-xl sm:text-2xl"
+            >
+              <li>ISRAEL</li> <li className="mt-[-12px]"> OLUWASAMI.</li>
+            </ul>
+            <div id="contactbtn">
+              <button className="px-4 py-2 text-[16px] sm:text-3xl rounded-md border border-black bg-white text-black hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200">
+                CONTACT ME
+              </button>
+            </div>
+          </header>
+
+          <section className="relative">
+            <section className="h-[80vh] text-5xl lg:text-7xl text-black flex place-items-center leading-[60px] lg:leading-[100px] ">
+              <div
+                id="mainText"
+                className="font-[500] font-cantarell tracking-tight"
+              >
+                Crafting <br />
+                <FlipWords
+                  words={words}
+                  className={` clashDisplay font-[600]  italic`}
+                />{" "}
+                <br />
+                endpoints and designs for <br />
+                <span className="clashDisplay">
+                  businesses, brands, and companies
+                </span>
+                .
+              </div>
+            </section>
+            <div
+              id="about"
+              className="text-black w-[300px] text-[17px] absolute sm:bottom-[-15px] right-0 flex gap-2"
+            >
+              <p>
+                <span className="pr-2 text-black/60 font-bold">ABOUT</span>I am
+                a seasoned senior software engineer with over 5 years of
+                experience in the field. I have a strong background in
+                developing web applications using javascript, nodejs, nestjs,
+                golang, amongst many others.
+              </p>
+            </div>
+            <div
+              id="arrow"
+              className="rounded-full hidden sm:flex border-black border w-[40px] justify-center items-center absolute right-0 animate-bounce h-[40px] cursor-pointer"
+            >
+              <ArrowDown />
+            </div>
+          </section>
         </div>
-      </div>
+      </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <section
+        ref={lastSectionRef}
+        style={{ display: "none" }}
+        className="border-t border-black border-b my-[160px] sm:my-20 py-12"
+      >
+        <Skills />
+      </section>
+    </div>
   );
 }

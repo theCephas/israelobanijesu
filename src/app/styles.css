@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "clashDisplay";
+  src: url(../../public/fonts/ClashDisplay-Variable.ttf) format("truetype");
+}
+
+.clashDisplay {
+  font-family: "clashDisplay";
+}
