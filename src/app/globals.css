@@ -69,3 +69,24 @@
     @apply bg-background text-foreground;
   }
 }
+
+#smooth-wrapper {
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+#smooth-content {
+  overflow: hidden;
+  width: 100%;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
