@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { FlipWords } from "@/components/ui/flip-words";
 import { ArrowDown } from "lucide-react";
 import Skills from "@/components/skills/Skills";
+import Projects from "@/components/Projects/Projects";
 
 export default function Home() {
   const words = ["seamless", "end-to-end", "unique"];
@@ -70,32 +71,24 @@ export default function Home() {
 
     return () => ctx.revert();
   }, []);
-
+  //
   return (
     <div className="relative" ref={comp}>
       <div
         id="intro-slider"
-        className="h-screen clashDisplay p-10 bg-black leading-7 text-white/60 absolute z-30 top-0 left-0 w-full justify-center flex flex-col gap-10 tracking-tight"
+        className="fixed h-screen clashDisplay p-10 bg-black leading-7 text-white/60 z-30 top-0 left-0 w-full justify-center flex flex-col gap-10 tracking-tight"
       >
-        <h1
-          id="title-1"
-          className="md:text-7xl sm:text-6xl text-4xl font-semibold"
-        >
-          Software Engineer
-        </h1>
-        <h1
-          id="title-2"
-          className="md:text-7xl sm:text-6xl text-4xl font-semibold"
-        >
-          Code Mentor
-        </h1>
-        <h1
-          id="title-3"
-          className="md:text-7xl sm:text-6xl text-4xl font-semibold"
-        >
-          Freelancer
-        </h1>
+        {["Software Engineer", "Code Mentor", "Freelancer"].map((text, i) => (
+          <h1
+            key={i + 1}
+            id="title-1"
+            className="md:text-7xl sm:text-6xl text-4xl font-semibold"
+          >
+            {text}
+          </h1>
+        ))}
       </div>
+      {/* <div id="smooth-content"> */}
       <section
         id="intro-slider2"
         className="bg-white py-8 px-4 sm:px-[20px] lg:px-[50px]"
@@ -164,6 +157,10 @@ export default function Home() {
       >
         <Skills />
       </section>
+      <section className="my-[160px] sm:my-24 selection">
+        <Projects />
+      </section>
+      {/* </div> */}
     </div>
   );
 }
