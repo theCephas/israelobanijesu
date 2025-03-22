@@ -5,6 +5,7 @@ import { FlipWords } from "@/components/ui/flip-words";
 import { ArrowDown } from "lucide-react";
 import Skills from "@/components/skills/Skills";
 import Projects from "@/components/Projects/Projects";
+import Experience from "@/components/skills/Experience";
 
 export default function Home() {
   const words = ["seamless", "end-to-end", "unique"];
@@ -108,36 +109,41 @@ export default function Home() {
             </div>
           </header>
 
-          <section className="relative">
-            <section className="h-[80vh] text-5xl lg:text-7xl text-black flex leading-[60px] lg:leading-[100px] pt-10">
+          <div className="relative">
+            <div className="mb-8 text-5xl lg:text-7xl text-black flex leading-[60px] lg:leading-[100px] pt-10">
               <div
                 id="mainText"
                 className="font-[500] font-cantarell tracking-tight pt-6"
               >
                 <div className="flex md:flex-row flex-col">
-                  <p>Crafting </p>
+                  <span>Crafting </span>
                   <FlipWords
                     words={words}
                     className={` clashDisplay font-[600]  italic`}
                   />{" "}
                 </div>
-                endpoints and designs for <br />
+                user experiences for <br />
                 <span className="clashDisplay">
                   businesses, brands, and companies
                 </span>
                 .
               </div>
-            </section>
-            <div
-              id="about"
-              className="text-black w-[300px] font-cantarell text-[17px] absolute sm:bottom-[-15px] right-0 flex gap-2"
-            >
-              <p>
-                <span className="pr-2 text-black/60 font-bold">ABOUT</span>I am
-                a seasoned senior software engineer with over 5 years of
-                experience in the field. I have a strong background in
-                developing web applications using javascript, nodejs, nestjs,
-                golang, amongst many others.
+            </div>
+            <div className="min-w-full text-black  font-cantarell text-[17px] sm:justify-between flex gap-2">
+              <div></div>
+              <p className="max-w-[450px]">
+                <span className="pr-2 text-black/60 font-bold">ABOUT -</span>I
+                am a seasoned frontend specialist with full-stack expertise and
+                over 5 years of experience building responsive, high-performance
+                web applications. Proficient in React, Next.js, TypeScript, and
+                modern frontend frameworks, with a strong foundation in UI/UX
+                principles. Experienced in leading development teams and
+                implementing scalable frontend architectures that enhance user
+                experience. Additionally, I possess a solid background in
+                backend technologies such as Node.js, NestJS, and Golang,
+                enabling me to deliver robust, user-centric solutions.
+                Demonstrates excellent problem-solving skills and
+                cross-functional collaboration in dynamic environments.
               </p>
             </div>
             <div
@@ -146,7 +152,7 @@ export default function Home() {
             >
               <ArrowDown />
             </div>
-          </section>
+          </div>
         </div>
       </section>
 
@@ -159,6 +165,9 @@ export default function Home() {
       </section>
       <section className="my-[160px] sm:my-24 selection">
         <Projects />
+      </section>
+      <section className="my-[160px] sm:my-24 selection">
+        <Experience />
       </section>
       {/* </div> */}
     </div>

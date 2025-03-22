@@ -16,7 +16,7 @@ const Projects = () => {
   );
   return (
     <div className="clashDisplay">
-      <h2 className="text-center text-3xl font-bold ">My Projects</h2>
+      <h2 className="text-center text-3xl font-bold uppercase">My Projects</h2>
       <p className="mb-6 py-3 text-center text-lg text-gray-500 px-6 lg:px-0">
         Here is a list of some of the most notable Projects I've worked on.
       </p>

@@ -4,20 +4,31 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const skillSets = [
-  { name: "JavaScript" },
+  { name: "React" },
+  { name: "Next.js" },
   { name: "TypeScript" },
-  { name: "ReactJS" },
-  { name: "NextJS" },
-  { name: "NodeJS" },
-  { name: "NestJS" },
-  { name: "GSAP" },
-  { name: "GraphQL" },
-  { name: "Github" },
-  { name: "MySQL" },
-  { name: "PostgreSQL" },
-  { name: "Docker" },
-  { name: "Flutter" },
+  { name: "JavaScript" },
+  { name: "Angular" },
+  { name: "Redux" },
+  { name: "MobX" },
+  { name: "HTML5" },
+  { name: "CSS3" },
+  { name: "Tailwind CSS" },
+  { name: "Bootstrap" },
+  { name: "SCSS" },
+  { name: "Material UI" },
+  { name: "Jest" },
+  { name: "End-to-end Testing" },
+  { name: "Unit Testing" },
+  { name: "Webpack" },
+  { name: "Git" },
   { name: "CI/CD" },
+  { name: "Node.js" },
+  { name: "Express" },
+  { name: "MongoDB" },
+  { name: "SQL" },
+  { name: "GraphQL" },
+  { name: "RESTful APIs" },
 ];
 
 const Skills = () => {
@@ -27,7 +38,7 @@ const Skills = () => {
     slidesToShow: 7,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
+    speed: 1000,
     autoplaySpeed: 2000,
     cssEase: "linear",
     responsive: [
@@ -44,7 +55,7 @@ const Skills = () => {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 500,
         settings: {
           slidesToShow: 2,
         },
@@ -53,7 +64,7 @@ const Skills = () => {
   };
 
   return (
-    <div className="container mx-auto w-full">
+    <div className="max-w-[1800px] mx-auto w-full">
       <Slider {...settings}>
         {skillSets.map((skill, index) => {
           return (
