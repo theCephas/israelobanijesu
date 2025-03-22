@@ -51,7 +51,7 @@ export const StickyScroll = ({ content, contentClassName }) => {
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
         // ringColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className={`h-[30rem] max-w-[1000px] xl:max-w-[1200px] mx-auto overflow-y-auto flex flex-col lg:grid lg:grid-cols-2 justify-center relative space-x-10 lg:rounded-[50px] p-10 hide-scroll ring-8 ring-black/75 ring-offset-4`}
+      className={`h-[30rem] max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px] mx-auto overflow-y-auto flex flex-col lg:grid lg:grid-cols-2 justify-center relative space-x-10 lg:rounded-[50px] p-10 hide-scroll ring-8 ring-black/75 ring-offset-4`}
       ref={ref}
     >
       <div className="div relative flex items-start px-4">
@@ -97,7 +97,7 @@ export const StickyScroll = ({ content, contentClassName }) => {
       <div
         style={{ background: backgroundGradient }}
         className={cn(
-          "hidden lg:block h-72 rounded-md bg-white sticky top-10 overflow-hidden",
+          "hidden lg:block h-80 rounded-md bg-white sticky top-10 overflow-hidden",
           contentClassName
         )}
       >
