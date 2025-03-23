@@ -3,7 +3,7 @@ import { HoverEffect } from "../ui/card-hover-effect";
 
 const Experience = () => {
   return (
-    <div className="max-w-[1440px] mt-40 pt-16 mx-auto border-t border-slate-950 clashDisplay">
+    <div className="max-w-[1440px] py-20 border-y border-slate-950 mx-auto clashDisplay">
       <h2 className="text-center text-3xl font-bold uppercase">
         Professional Experience
       </h2>

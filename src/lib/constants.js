@@ -1,238 +1,75 @@
-import { Github, Link } from "lucide-react";
-import Image from "next/image";
-
 export const PROJECTS = [
   {
     title: "WasteNG",
     description:
       "WasteNG is a technology company building solutions for households and Waste disposal companies.",
-    content: (
-      <div className="h-full w-full flex flex-col gap-1 items-center justify-center text-white">
-        <Image
-          src="/projectsImgs/WasteNG.png"
-          width={3000}
-          height={3000}
-          className="h-full w-full object-cover rounded-md"
-          alt="linear board demo"
-        />
-        <div className="w-full flex justify-between px-1">
-          <a
-            className="hover:text-green-500 transition-all duration-300"
-            href="https://github.com/Waste-NG/waste-ng-website"
-            target="_blank"
-          >
-            <Github size={22} />
-          </a>
-          <a
-            className="hover:text-green-500 transition-all duration-300"
-            href="https://waste.ng"
-            target="_blank"
-          >
-            <Link size={22} />
-          </a>
-        </div>
-      </div>
-    ),
+    url: "https://waste.ng",
+    github: "https://github.com/Waste-NG/waste-ng-website",
+    img: "/projectsImgs/WasteNG.png",
+    stack: ["Nextjs", "Typescript", "Tailwindcss", "Flutter"],
   },
   {
     title: "The canada pathway",
     description:
       "Thecanadapathway is a website that provides paid courses on sophisticated travel guides that gives realistic notes on how to relocate to first world countries.",
-    content: (
-      <div className="h-full w-full flex flex-col gap-1 items-center justify-center text-white">
-        <Image
-          src="/projectsImgs/Thecanadapathway.png"
-          width={3000}
-          height={3000}
-          className="h-full w-full object-cover rounded-md"
-          alt="linear board demo"
-        />
-        <div className="w-full flex justify-between px-1">
-          <a
-            className="hover:text-green-500 transition-all duration-300"
-            href="https://github.com/Israel001/thecanadapathway"
-            target="_blank"
-          >
-            <Github size={22} />
-          </a>
-          <a
-            className="hover:text-green-500 transition-all duration-300"
-            href="https://thecanadapathway.com/"
-            target="_blank"
-          >
-            <Link size={22} />
-          </a>
-        </div>
-      </div>
-    ),
+    url: "https://thecanadapathway.com/",
+    github: "https://github.com/Israel001/thecanadapathway",
+    img: "/projectsImgs/Thecanadapathway.png",
+    stack: ["Nextjs", "Typescript", "Traditional CSS"],
   },
   {
     title: "Harp",
     description:
       "Harp is an all-in-one customer experience solution for any kind of business.",
-    content: (
-      <div className="h-full w-full flex flex-col gap-1 items-center justify-center text-white">
-        <Image
-          src="/projectsImgs/Harp.png"
-          width={3000}
-          height={3000}
-          className="h-full w-full object-cover rounded-md"
-          alt="linear board demo"
-        />
-        <div className="w-full flex justify-between px-1">
-          <a
-            className="hover:text-green-500 transition-all duration-300"
-            href=""
-            target="_blank"
-          >
-            <Github size={22} />
-          </a>
-          <a
-            className="hover:text-green-500 transition-all duration-300"
-            href="https://getharp.io"
-            target="_blank"
-          >
-            <Link size={22} />
-          </a>
-        </div>
-      </div>
-    ),
+    url: "https://getharp.io",
+    github: "",
+    img: "/projectsImgs/Harp.png",
+    stack: ["Nextjs", "Typescript", "Material UI"],
   },
   {
     title: "The Advertisers",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in lacus sed justo interdum interdum at et nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
-    content: (
-      <div className="h-full w-full flex flex-col gap-1 items-center justify-center text-white">
-        <Image
-          src="/projectsImgs/TheAdvertisers.png"
-          width={3000}
-          height={3000}
-          className="h-full w-full object-cover rounded-md"
-          alt="linear board demo"
-        />
-        <div className="w-full flex justify-between px-1">
-          <a
-            className="hover:text-green-500 transition-all duration-300"
-            href="https://github.com/Israel001/the-advertisers"
-            target="_blank"
-          >
-            <Github size={22} />
-          </a>
-          <a
-            className="hover:text-green-500 transition-all duration-300"
-            href="https://the-advertisers.com"
-            target="_blank"
-          >
-            <Link size={22} />
-          </a>
-        </div>
-      </div>
-    ),
+      "The advertisers is an online marketplace for connecting sellers and buyers around the world.",
+    url: "https://the-advertisers.com",
+    github: "https://github.com/Israel001/the-advertisers",
+    img: "/projectsImgs/TheAdvertisers.png",
+    stack: ["Vite", "Tailwindcss", "Typescript"],
   },
   {
     title: "Homease",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in lacus sed justo interdum interdum at et nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
-    content: (
-      <div className="h-full w-full flex flex-col gap-1 items-center justify-center text-white">
-        <Image
-          src="/projectsImgs/Homease.png"
-          width={3000}
-          height={3000}
-          className="h-full w-full object-cover rounded-md"
-          alt="linear board demo"
-        />
-        <div className="w-full flex justify-between px-1">
-          <a
-            className="hover:text-green-500 transition-all duration-300"
-            href=""
-            target="_blank"
-          >
-            <Github size={22} />
-          </a>
-          <a
-            className="hover:text-green-500 transition-all duration-300"
-            href="https://homease.ng"
-            target="_blank"
-          >
-            <Link size={22} />
-          </a>
-        </div>
-      </div>
-    ),
+      "Homease is a forward-thinking property management startup dedicated to revolutionizing the way properties are managed, rented, and sold.",
+    url: "https://homease.ng",
+    github: "",
+    img: "/projectsImgs/Homease.png",
+    stack: ["Nextjs", "Tailwindcss", "Typescript"],
   },
   {
     title: "Christ Bride Tabernacle",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in lacus sed justo interdum interdum at et nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
-    content: (
-      <div className="h-full w-full flex flex-col gap-1 items-center justify-center text-white">
-        <Image
-          src="/projectsImgs/Church.png"
-          width={3000}
-          height={3000}
-          className="h-full w-full object-cover rounded-md"
-          alt="linear board demo"
-        />
-        <div className="w-full flex justify-between px-1">
-          <a
-            className="hover:text-green-500 transition-all duration-300"
-            href="https://github.com/Israel001/ibadan-church-convention"
-            target="_blank"
-          >
-            <Github size={22} />
-          </a>
-          <a
-            className="hover:text-green-500 transition-all duration-300"
-            href="https://convention.christbridetabernacle.com/"
-            target="_blank"
-          >
-            <Link size={22} />
-          </a>
-        </div>
-      </div>
-    ),
+      "Church Convention Registration Portal is a simplistic portal for people to register and indicate that they will be attending a particular church's convention for a particular year.",
+    url: "https://convention.christbridetabernacle.com/",
+    github: "https://github.com/Israel001/ibadan-church-convention",
+    img: "/projectsImgs/Church.png",
+    stack: ["Nestjs", "Typescript", "EJS"],
   },
   {
     title: "Divine Era Foundation",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in lacus sed justo interdum interdum at et nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
-    content: (
-      <div className="h-full w-full flex flex-col gap-1 items-center justify-center text-white">
-        <Image
-          src="/projectsImgs/Divine.png"
-          width={3000}
-          height={3000}
-          className="h-full w-full object-cover rounded-md"
-          alt="linear board demo"
-        />
-        <div className="w-full flex justify-between px-1">
-          <a
-            className="hover:text-green-500 transition-all duration-300"
-            href="https://github.com/Israel001/divine-era-ngo"
-            target="_blank"
-          >
-            <Github size={22} />
-          </a>
-          <a
-            className="hover:text-green-500 transition-all duration-300"
-            href="https://www.divineerafoundation.com/"
-            target="_blank"
-          >
-            <Link size={22} />
-          </a>
-        </div>
-      </div>
-    ),
+      "Divine Era Foundation is a NGO website designed to showcase the evidence of a particular NGO's activities and also provide options for people to donate if they want to.",
+    url: "https://www.divineerafoundation.com/",
+    github: "https://github.com/Israel001/divine-era-ngo",
+    img: "/projectsImgs/Divine.png",
+    stack: ["Nextjs", "Bootstrap", "Tailwindcss"],
   },
-  {
-    title: "",
-    description: "",
-    content: (
-      <div className="h-full w-full flex flex-col gap-1 items-center justify-center text-white"></div>
-    ),
-  },
+  // {
+  //   title: "",
+  //   description: "",
+  //   url: "",
+  //   github: "",
+  //   img: "",
+  //   stack:[]
+  // },
 ];
 
 export const EXPERIENCE = [

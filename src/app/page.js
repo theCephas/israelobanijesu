@@ -1,16 +1,31 @@
 "use client";
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { FlipWords } from "@/components/ui/flip-words";
 import { ArrowDown } from "lucide-react";
 import Skills from "@/components/skills/Skills";
 import Projects from "@/components/Projects/Projects";
 import Experience from "@/components/skills/Experience";
+import Link from "next/link";
+import { GlowingStarsBackgroundCard } from "@/components/ui/glowing-stars";
 
 export default function Home() {
   const words = ["seamless", "end-to-end", "unique"];
   const comp = useRef(null);
   const lastSectionRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      document.documentElement.style.scrollBehavior = "smooth";
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener on unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -74,7 +89,7 @@ export default function Home() {
   }, []);
   //
   return (
-    <div className="relative" ref={comp}>
+    <div className="relative overflow-x-hidden" ref={comp}>
       <div
         id="intro-slider"
         className="fixed h-screen clashDisplay p-10 bg-black leading-7 text-white/60 z-30 top-0 left-0 w-full justify-center flex flex-col gap-10 tracking-tight"
@@ -103,9 +118,12 @@ export default function Home() {
               <li>ISRAEL</li> <li className="mt-[-11px]"> OLUWASAMI.</li>
             </ul>
             <div id="contactbtn">
-              <button className="px-4 py-2 text-[16px] sm:text-3xl rounded-md border border-black bg-white text-black hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200">
+              <Link
+                href={"#contact"}
+                className="px-4 py-2 text-[16px] sm:text-3xl rounded-md border border-black bg-white text-black hover:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200"
+              >
                 CONTACT ME
-              </button>
+              </Link>
             </div>
           </header>
 
@@ -146,12 +164,13 @@ export default function Home() {
                 cross-functional collaboration in dynamic environments.
               </p>
             </div>
-            <div
+            <Link
               id="arrow"
+              href={"#projects"}
               className="rounded-full hidden sm:flex border-black border w-[40px] justify-center items-center absolute right-0 animate-bounce h-[40px] cursor-pointer"
             >
               <ArrowDown />
-            </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -163,11 +182,14 @@ export default function Home() {
       >
         <Skills />
       </section>
-      <section className="my-[160px] sm:my-24 selection">
+      <section id="projects" className="my-[160px] sm:my-24 selection">
         <Projects />
       </section>
       <section className="my-[160px] sm:my-24 selection">
         <Experience />
+      </section>
+      <section id="contact" className="my-[160px] sm:my-24 selection">
+        <GlowingStarsBackgroundCard></GlowingStarsBackgroundCard>
       </section>
       {/* </div> */}
     </div>

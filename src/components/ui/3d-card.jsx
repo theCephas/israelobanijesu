@@ -36,10 +36,7 @@ export const CardContainer = ({ children, className, containerClassName }) => {
   return (
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
-        className={cn(
-          "py-20 flex items-center justify-center",
-          containerClassName
-        )}
+        className={cn("", containerClassName)}
         style={{
           perspective: "1000px",
         }}
@@ -68,7 +65,7 @@ export const CardBody = ({ children, className }) => {
   return (
     <div
       className={cn(
-        "h-96 w-96 [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
+        "w-full min-h-full [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
         className
       )}
     >
@@ -92,10 +89,6 @@ export const CardItem = ({
   const ref = useRef(null);
   const [isMouseEntered] = useMouseEnter();
 
-  useEffect(() => {
-    handleAnimations();
-  }, [isMouseEntered, handleAnimations()]);
-
   const handleAnimations = () => {
     if (!ref.current) return;
     if (isMouseEntered) {
@@ -104,6 +97,10 @@ export const CardItem = ({
       ref.current.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
     }
   };
+
+  useEffect(() => {
+    handleAnimations();
+  }, [isMouseEntered, handleAnimations]);
 
   return (
     <Tag
