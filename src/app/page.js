@@ -7,7 +7,7 @@ import Skills from "@/components/skills/Skills";
 import Projects from "@/components/Projects/Projects";
 import Experience from "@/components/skills/Experience";
 import Link from "next/link";
-import { GlowingStarsBackgroundCard } from "@/components/ui/glowing-stars";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   const words = ["seamless", "end-to-end", "unique"];
@@ -188,8 +188,11 @@ export default function Home() {
       <section className="my-[160px] sm:my-24 selection">
         <Experience />
       </section>
-      <section id="contact" className="my-[160px] sm:my-24 selection">
-        <GlowingStarsBackgroundCard></GlowingStarsBackgroundCard>
+      <section
+        id="contact"
+        className="my-[160px] sm:my-24 selection max-w-[1440px] mx-auto bg-slate-800 rounded-xl"
+      >
+        <Contact />
       </section>
       {/* </div> */}
     </div>

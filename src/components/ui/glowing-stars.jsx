@@ -29,11 +29,7 @@ export const GlowingStarsBackgroundCard = ({ className, children }) => {
 };
 
 export const GlowingStarsDescription = ({ className, children }) => {
-  return (
-    <p className={cn("text-base text-white max-w-[16rem]", className)}>
-      {children}
-    </p>
-  );
+  return <p className={cn("text-base text-white", className)}>{children}</p>;
 };
 
 export const GlowingStarsTitle = ({ className, children }) => {
