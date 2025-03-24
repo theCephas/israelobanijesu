@@ -16,7 +16,7 @@ export const GlowingStarsBackgroundCard = ({ className, children }) => {
         setMouseEnter(false);
       }}
       className={cn(
-        "bg-white/15 backdrop-blur-xl p-4 w-full max-h-[20rem] h-full rounded-xl border border-[#eaeaea] dark:border-neutral-600",
+        "bg-white/15 backdrop-blur-xl p-4 w-full max-h-[20rem] h-full md:rounded-xl md:border md:border-[#eaeaea] dark:border-neutral-600",
         className
       )}
     >

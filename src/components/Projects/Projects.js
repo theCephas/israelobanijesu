@@ -39,7 +39,7 @@ const Projects = () => {
                 {proj.description}
               </CardItem>
               <div className="mt-auto flex flex-col gap-20">
-                <CardItem translateZ="100" className="w-full">
+                <CardItem translateZ="50" className="w-full">
                   <Image
                     src={proj.img}
                     height="1000"
@@ -47,7 +47,7 @@ const Projects = () => {
                     className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl border dark:border-white/[0.2] mb-2"
                     alt=""
                   />
-                  <div className="flex gap-2 items-center text-sm italic text-neutral-600 font-semibold">
+                  <div className="flex gap-2 items-center text-[8px] xs:text-xs italic text-neutral-600 font-semibold">
                     {proj.stack.map((item, i) => (
                       <p key={i}>
                         {i !== 0 && <span className="mr-2">-</span>} {item}
@@ -56,13 +56,19 @@ const Projects = () => {
                   </div>
                 </CardItem>
                 <div className="flex justify-between items-center">
-                  <Link
-                    href={proj.github}
-                    target="__blank"
-                    className="text-neutral-600 hover:text-green-500 text-xs font-bold"
-                  >
-                    <IconBrandGithub size={22} />
-                  </Link>
+                  {proj.private ? (
+                    <p className="border border-orange-600 text-xs font-medium text-orange-600 bg-orange-200 py-0.5 px-2 rounded-xl">
+                      Private Repo
+                    </p>
+                  ) : (
+                    <Link
+                      href={proj.github}
+                      target="__blank"
+                      className="text-neutral-600 hover:text-green-500 text-xs font-bold"
+                    >
+                      <IconBrandGithub size={22} />
+                    </Link>
+                  )}
                   <Link
                     href={proj.url}
                     target="__blank"

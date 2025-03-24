@@ -2,12 +2,13 @@
 import { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { FlipWords } from "@/components/ui/flip-words";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Copy } from "lucide-react";
 import Skills from "@/components/skills/Skills";
 import Projects from "@/components/Projects/Projects";
 import Experience from "@/components/skills/Experience";
 import Link from "next/link";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const words = ["seamless", "end-to-end", "unique"];
@@ -190,10 +191,11 @@ export default function Home() {
       </section>
       <section
         id="contact"
-        className="my-[160px] sm:my-24 selection max-w-[1440px] mx-auto bg-slate-800 rounded-xl"
+        className="my-24 selection md:max-w-[1440px] md:mx-auto md:rounded-xl md:px-6 2xl:px-0 clashDisplay"
       >
         <Contact />
       </section>
+      <Footer />
       {/* </div> */}
     </div>
   );

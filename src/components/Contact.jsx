@@ -22,7 +22,7 @@ const Contact = () => {
     }
   };
   return (
-    <GlowingStarsBackgroundCard className={"min-h-fit"}>
+    <GlowingStarsBackgroundCard className={"min-h-fit bg-slate-800"}>
       <GlowingStarsTitle className={"text-center my-4 text-3xl"}>
         Send me a message!
       </GlowingStarsTitle>

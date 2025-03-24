@@ -7,6 +7,7 @@ export const PROJECTS = [
     github: "https://github.com/Waste-NG/waste-ng-website",
     img: "/projectsImgs/WasteNG.png",
     stack: ["Nextjs", "Typescript", "Tailwindcss", "Flutter"],
+    private: true,
   },
   {
     title: "The canada pathway",
@@ -16,6 +17,7 @@ export const PROJECTS = [
     github: "https://github.com/Israel001/thecanadapathway",
     img: "/projectsImgs/Thecanadapathway.png",
     stack: ["Nextjs", "Typescript", "Traditional CSS"],
+    private: false,
   },
   {
     title: "Harp",
@@ -25,6 +27,7 @@ export const PROJECTS = [
     github: "",
     img: "/projectsImgs/Harp.png",
     stack: ["Nextjs", "Typescript", "Material UI"],
+    private: true,
   },
   {
     title: "The Advertisers",
@@ -34,6 +37,7 @@ export const PROJECTS = [
     github: "https://github.com/Israel001/the-advertisers",
     img: "/projectsImgs/TheAdvertisers.png",
     stack: ["Vite", "Tailwindcss", "Typescript"],
+    private: false,
   },
   {
     title: "Homease",
@@ -43,6 +47,7 @@ export const PROJECTS = [
     github: "",
     img: "/projectsImgs/Homease.png",
     stack: ["Nextjs", "Tailwindcss", "Typescript"],
+    private: true,
   },
   {
     title: "Christ Bride Tabernacle",
@@ -52,6 +57,7 @@ export const PROJECTS = [
     github: "https://github.com/Israel001/ibadan-church-convention",
     img: "/projectsImgs/Church.png",
     stack: ["Nestjs", "Typescript", "EJS"],
+    private: false,
   },
   {
     title: "Divine Era Foundation",
@@ -61,15 +67,18 @@ export const PROJECTS = [
     github: "https://github.com/Israel001/divine-era-ngo",
     img: "/projectsImgs/Divine.png",
     stack: ["Nextjs", "Bootstrap", "Tailwindcss"],
+    private: false,
   },
-  // {
-  //   title: "",
-  //   description: "",
-  //   url: "",
-  //   github: "",
-  //   img: "",
-  //   stack:[]
-  // },
+  {
+    title: "Israel Oluwasami Portfolio",
+    description:
+      "I am a seasoned frontend specialist with full-stack expertise and over 5 years of experience building responsive, high-performance web applications.",
+    url: "israelobanijesu.vercel.app",
+    github: "https://github.com/theCephas/israelobanijesu",
+    img: "/projectsImgs/Portfolio.png",
+    stack: ["Nextjs", "Tailwindcss", "GSAP", "ThreeJS"],
+    private: false,
+  },
 ];
 
 export const EXPERIENCE = [
