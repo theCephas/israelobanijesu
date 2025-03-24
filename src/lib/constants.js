@@ -98,8 +98,8 @@ export const EXPERIENCE = [
   },
   {
     name: "Fonu (Telecommunications Company)",
-    title: "Chief Technology Officer",
-    duration: "Jan 2021 - Dec 2024",
+    title: "Lead Frontend Engineer",
+    duration: "May 2021 - Dec 2024",
     details: [
       "Led frontend architecture decisions and implementation using React, Next.js, and TypeScript",
       "Architected real-time communication systems with WebSockets for chat functionality",
@@ -112,7 +112,7 @@ export const EXPERIENCE = [
   },
   {
     name: "Canary Points Corporate Service",
-    title: "Senior Full Stack Developer (Frontend Specialist)",
+    title: "Full Stack Developer (Frontend Specialist)",
     duration: "Apr 2021 - Jan 2022",
     details: [
       "Developed frontend components for a centralized portal managing fintech products",
@@ -125,7 +125,7 @@ export const EXPERIENCE = [
   },
   {
     name: "Hamsa Technologies (Hanoi, Vietnam)",
-    title: "Senior Frontend Developer",
+    title: "Frontend Developer",
     duration: "Jan 2019 - Feb 2021",
     details: [
       "Built production-ready Shopify apps with a focus on frontend interfaces and user experience",
