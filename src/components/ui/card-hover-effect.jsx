@@ -67,7 +67,22 @@ export const HoverEffect = ({ items, className }) => {
                 </span>
               </p>
             </div>
-            <div className="flex flex-col gap-2 mt-8">
+            {item.note && (
+              <p
+                className={cn(
+                  "italic font-semibold text-sm mt-6",
+                  hoveredIndex === idx ? "text-zinc-200" : "text-slate-600"
+                )}
+              >
+                {item.note}
+              </p>
+            )}
+            <div
+              className={cn(
+                "flex flex-col gap-2",
+                item.note ? "mt-4" : "mt-8"
+              )}
+            >
               {item.details.map((detail, i) => (
                 <CardDescription
                   className={

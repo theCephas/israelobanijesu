@@ -152,7 +152,7 @@ export default function Home() {
               <div></div>
               <p className="max-w-[450px]">
                 <span className="pr-2 text-black/60 font-bold">ABOUT -</span>I
-                am a seasoned frontend specialist with full-stack expertise and
+                am a seasoned specialist with full-stack expertise and
                 over 5 years of experience building responsive, high-performance
                 web applications. Proficient in React, Next.js, TypeScript, and
                 modern frontend frameworks, with a strong foundation in UI/UX

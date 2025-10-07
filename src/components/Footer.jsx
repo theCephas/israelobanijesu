@@ -78,7 +78,7 @@ const Footer = () => {
         </div>
       </div>
       <p className="text-sm text-neutral-600">
-        Copyright © Isreal Oluwasami {new Date().getFullYear()} All rights
+        Copyright © Israel Oluwasami {new Date().getFullYear()} All rights
         Reserved
       </p>
     </footer>
