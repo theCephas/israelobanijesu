@@ -151,18 +151,11 @@ export default function Home() {
             <div className="min-w-full text-black  font-cantarell text-[17px] sm:justify-between flex gap-2">
               <div></div>
               <p className="max-w-[450px]">
-                <span className="pr-2 text-black/60 font-bold">ABOUT -</span>I
-                am a seasoned specialist with full-stack expertise and
-                over 5 years of experience building responsive, high-performance
-                web applications. Proficient in React, Next.js, TypeScript, and
-                modern frontend frameworks, with a strong foundation in UI/UX
-                principles. Experienced in leading development teams and
-                implementing scalable frontend architectures that enhance user
-                experience. Additionally, I possess a solid background in
-                backend technologies such as Node.js, NestJS, and Golang,
-                enabling me to deliver robust, user-centric solutions.
-                Demonstrates excellent problem-solving skills and
-                cross-functional collaboration in dynamic environments.
+                <span className="pr-2 text-black/60 font-bold">ABOUT -</span>Full-stack engineer with 5+ years of experience designing and building scalable, high-performance web applications. Adept at 
+both frontend and backend development with expertise in React, Next.js, Node.js, and TypeScript. Passionate about 
+delivering seamless user experiences through robust UI/UX design, while also proficient in architecting backend services, 
+APIs, and databases. Experienced in leading cross-functional teams, mentoring engineers, and implementing CI/CD workflows 
+in agile environments.   
               </p>
             </div>
             <Link

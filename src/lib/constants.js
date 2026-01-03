@@ -1,5 +1,23 @@
 export const PROJECTS = [
   {
+    title: "Koajo",
+    description: "Koajo is a fintech solution that revolutionizes the way people can save and build wealth.",
+    url: "https://beta.koajo.com",
+    github: "https://github.com/Israel001/koajo-api",
+    img: "/projectsImgs/Koajo.png",
+    stack: ["Nextjs", "Typescript", "Tailwindcss", "Nestjs"],
+    private: false
+  },
+  {
+    title: "DailyHelp",
+    description: "DailyHelp is a technology Company whose mission is to add ease to the way people find service providers & provide services to the world in general.",
+    url: "https://dailyhelpint.org",
+    github: "https://github.com/DailyHelp/dailyhelp-api",
+    img: "/projectsImgs/DailyHelp.png",
+    stack: ["Nextjs", "Typescript", "Tailwindcss", "Nestjs"],
+    private: false
+  },
+  {
     title: "WasteNG",
     description:
       "WasteNG is a technology company building solutions for households and Waste disposal companies.",
@@ -95,6 +113,18 @@ export const EXPERIENCE = [
       "Led frontend and backend testing efforts with Jest and Postman for comprehensive test coverage.",
       "Conducted internal training on scalable frontend architecture and backend service design."
     ],
+  },
+  {
+    name: "Utiva",
+    title: "Backend Engineer (Contract)",
+    duration: "Jan 2025 - Dec 2025",
+    details: [
+      "Built core backend services for a betting platform, implementing features such as user authentication, wallet funding, bet placement, settlement etc.",
+      "Developed and maintained a secure and well-documented REST APIs consumed by web clients and third-party providers, with input validation, idempotency, and consistent error handling",
+      "Integrated external payment and KYC services, through the use of asynchronous webhooks",
+      "Ensured performance and reliability improvements through the use of caching, database indexing, background jobs etc.",
+      "Improved operational excellence by making use of structured logging and high-priority alerts for issues that occur on production, in order to trace and solve open incidents easily"
+    ]
   },
   {
     name: "Fonu (Telecommunications Company)",
